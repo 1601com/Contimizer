@@ -1,0 +1,67 @@
+#CONTIMIZER{
+    padding: 10px;
+}
+
+#CONTIMIZER .section{
+    margin: 0 0 40px 0;
+}
+
+#CONTIMIZER h2{
+    margin: 10px 0;
+}
+
+#CONTIMIZER button,#CONTIMIZER .fileUploadButton{
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+    border: none;
+    padding: 7px 20px;
+    background-color:#172B3B;
+    color:#fff;
+}
+
+#CONTIMIZER input{
+    margin: 5px 5px 5px 0;
+    border: 1px solid #4f4f4f;
+    padding:3px 6px 3px 6px;
+    background-color: #fff;
+    color: #4f4f4f;
+    font-size: 1em;
+    text-decoration: none;
+}
+#CONTIMIZER input[disabled]{
+    border: 0;
+}
+
+#CONTIMIZER input:hover, #CONTIMIZER .fileUploadButton:hover{
+    cursor:pointer;
+}
+#CONTIMIZER input:active{
+    background-color: #fff;
+    color: #003d3b;
+}
+
+#CONTIMIZER .error{
+    margin-top: 5px;
+    padding: 6px 11px 6px 11px;
+    border:2px solid darkred;
+    background-color:red;
+    color: #fff;
+}
+#CONTIMIZER .info{
+    margin-top: 5px;
+    padding: 6px 11px 6px 11px;
+    border: 2px solid black;
+    background-color: yellow;
+    color: #000;
+}
+#CONTIMIZER .success{
+    margin-top: 5px;
+    padding: 6px 11px 6px 11px;
+    border: 2px solid darkgreen;
+    background-color: green;
+    color: #fff;
+}
+#CONTIMIZER label.fileUploadButton input[type="file"] {
+    position: fixed;
+    top: -1000px;
+}

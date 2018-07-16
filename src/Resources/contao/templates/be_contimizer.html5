@@ -1,0 +1,33 @@
+<div id="CONTIMIZER" class="contimizer">
+    <div class="export section">
+        <h2><?=$this->headlineExport?></h2>
+        <p><?=$this->textExport?></p>
+        <form id="CONTIMIZER_FORM_EXPORT" method="post" action="/<?=$this->request;?>">
+            <input type="hidden" name="FORM_SUBMIT" value="tl_filters">
+            <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+            <input type="hidden" name="type" value="export">
+            <button><?=$this->buttonExport?></button>
+        </form>
+    </div>
+    <div class="import section">
+        <h2><?=$this->headlineImport?></h2>
+        <p><?=$this->textImport?></p>
+        <form id="CONTIMIZER_FORM_IMPORT" method="post" action="/<?=$this->request;?>" enctype="multipart/form-data">
+            <input type="hidden" name="FORM_SUBMIT" value="tl_filters">
+            <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+            <input type="hidden" name="type" value="import">
+            <label class="fileUploadButton">
+                <input type="file" name="importCSV" class="upload" id="uploadf" value="Upload">
+                <span>Datei</span>
+            </label>
+            <input id="filesp" placeholder="Datei auswählen" disabled="disabled"><br>
+            <input type="email" name="mailaddress"  placeholder="E-Mail"><br>
+            <button><?=$this->buttonImport?></button>
+        </form>
+    </div>
+
+    <div class="informations">
+        <?=($this->info) ?: $this->info;?>
+    </div>
+    <script src="<?=$this->js?>"></script>
+</div>
