@@ -67,13 +67,6 @@ class Contimizer extends \BackendModule
             return false;
         }
 
-        /*Check email*/
-        if(empty($email))
-        {
-            $this->Template->info = $ContimizerCI->getInfoAsHTML("div","",$ContimizerCI->setInfo($GLOBALS['TL_LANG']['MSC']['contimizer']['email']['empty'],"'error'"));
-            return false;
-        }
-
         /*Create a backup before import*/
         if(!$ContimizerCI->createBackupTable()){
             $ContimizerCI->sendMail($email,$GLOBALS['TL_LANG']['MSC']['contimizer']['db']['noBackup'],$GLOBALS['TL_LANG']['MSC']['contimizer']['email']['text']);
