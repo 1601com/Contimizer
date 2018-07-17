@@ -2,6 +2,9 @@
 
 *Extension for Contao4*
 
+
+Install: `composer require agentur1601com/contimizer` 
+
 * Simple export:
   * Export as csv
   * Easy update able CSV document
